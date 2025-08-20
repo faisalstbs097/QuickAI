@@ -1,6 +1,6 @@
-// backend/routes/aiRoutes.js
+import express from "express";  // import express
+const router = express.Router(); // declare router only once
 
-import express from "express";
 import auth from "../middleware/auth.js"; // note .js extension
 import {
   generateImage,
@@ -11,8 +11,7 @@ import {
   blogTitles,
 } from "../controllers/aiController.js"; // note .js extension
 
-const router = Router();
-
+// Define routes
 router.post("/generate-image", auth, generateImage);
 router.post("/remove-background", auth, removeBackground);
 router.post("/remove-object", auth, removeObject);
