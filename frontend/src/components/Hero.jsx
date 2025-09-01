@@ -38,7 +38,7 @@ const Hero = () => {
 
     const handleStart = async () => {
         if (user) {
-            await fetch(`${import.meta.env.VITE_API_URL}/track-click`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ userId: user.id, action: "startCreating" }),
